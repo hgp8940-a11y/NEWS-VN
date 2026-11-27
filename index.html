@@ -101,3 +101,22 @@ document.getElementById('search').addEventListener('input',filterNews);
 </script>
 </body>
 </html>
+
+<script>
+document.querySelectorAll(".card").forEach(card => {
+    card.style.cursor = "pointer";
+
+    card.addEventListener("click", function() {
+        const title = this.querySelector("h3")?.innerText || "Tin tức NEWS VN";
+        const category = this.dataset.category || "Tin tức";
+        const content = this.querySelector("p")?.innerText || "";
+
+        const url = "baiviet.html?title=" +
+            encodeURIComponent(title) +
+            "&category=" + encodeURIComponent(category) +
+            "&content=" + encodeURIComponent(content);
+
+        window.location.href = url;
+    });
+});
+</script>
