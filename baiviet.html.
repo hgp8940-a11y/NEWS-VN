@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEWS VN - Chi tiết bài viết</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1019;color:#fff;font-family:Arial,sans-serif}
+header{background:#101827;padding:22px 7%;border-bottom:3px solid #ed3549}
+.logo{font-size:30px;font-weight:bold}
+.logo span{color:#ed3549}
+.container{max-width:850px;margin:40px auto;padding:20px}
+.back{color:#ff5364;text-decoration:none}
+.category{color:#ff5364;font-weight:bold;margin-top:35px}
+h1{font-size:34px;line-height:1.4}
+.meta{color:#8995a8;font-size:14px}
+.cover{height:280px;background:#1b293d;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:70px;margin:25px 0}
+.content{font-size:18px;line-height:1.9;color:#d5dbe5}
+footer{text-align:center;padding:30px;background:#101827;color:#aaa}
+@media(max-width:600px){h1{font-size:25px}.cover{height:190px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">NEWS <span>VN</span></div>
+ <p>TIN TỨC TỔNG HỢP 24H</p>
+</header>
+
+<main class="container">
+ <a class="back" href="index.html">← Quay lại trang chủ</a>
+
+ <div class="category" id="category">THỜI SỰ</div>
+
+ <h1 id="title">Chào mừng đến với NEWS VN</h1>
+
+ <p class="meta">NEWS VN | <span id="date"></span></p>
+
+ <div class="cover">📰</div>
+
+ <article class="content" id="content">
+  <p>Chào mừng bạn đến với trang đọc tin tức của NEWS VN.</p>
+  <p>Đây là trang hiển thị nội dung chi tiết của từng bài viết.</p>
+  <p>Những bài viết thực tế sẽ được cập nhật sau khi website có hệ thống đăng bài.</p>
+ </article>
+</main>
+
+<footer>
+ <strong>NEWS VN</strong>
+ <p>Tin tức tổng hợp 24H</p>
+</footer>
+
+<script>
+const params = new URLSearchParams(location.search);
+const title = params.get("title");
+const category = params.get("category");
+const content = params.get("content");
+
+if(title) document.getElementById("title").textContent = title;
+if(category) document.getElementById("category").textContent = category.toUpperCase();
+if(content) {
+  const article = document.getElementById("content");
+  article.replaceChildren();
+  content.split("\n").filter(Boolean).forEach(line => {
+    const p = document.createElement("p");
+    p.textContent = line;
+    article.appendChild(p);
+  });
+}
+
+document.getElementById("date").textContent =
+new Date().toLocaleDateString("vi-VN");
+</script>
+</body>
+</html>
