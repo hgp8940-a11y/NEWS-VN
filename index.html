@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVP NEWS 24H</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #10141d;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #080c14;
+            padding: 22px 8%;
+            border-bottom: 2px solid #e63946;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff3949;
+            font-size: 30px;
+        }
+
+        nav {
+            background: #171e2b;
+            padding: 15px 8%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 30px 8%;
+        }
+
+        .headline {
+            background: #202a3a;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .headline h2 {
+            color: #ff4757;
+        }
+
+        .news {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .card {
+            background: #202a3a;
+            padding: 22px;
+            border-radius: 12px;
+        }
+
+        .card h3 {
+            color: #ff5967;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1> NEWS VN</h1>
+    <p>Tin tức mới nhất - Cập nhật mỗi ngày</p>
+</header>
+
+<nav>
+    <a href="#">Trang chủ</a>
+    <a href="#">Thời sự</a>
+    <a href="#">Thế giới</a>
+    <a href="#">Công nghệ</a>
+    <a href="#">Thể thao</a>
+    <a href="#">Giải trí</a>
+</nav>
+
+<div class="container">
+    <section class="headline">
+        <h2>CHÀO MỪNG ĐẾN VỚI NEWS VN</h2>
+        <p>Nơi cập nhật tin tức tổng hợp và những thông tin đáng chú ý.</p>
+    </section>
+
+    <h2>TIN TỨC NỔI BẬT</h2>
+
+    <section class="news">
+        <div class="card">
+            <h3>Thời sự</h3>
+            <p>Không gian dành cho những tin tức thời sự mới nhất.</p>
+        </div>
+
+        <div class="card">
+            <h3>Thế giới</h3>
+            <p>Cập nhật các sự kiện nổi bật trên thế giới.</p>
+        </div>
+
+        <div class="card">
+            <h3>Công nghệ</h3>
+            <p>Khám phá công nghệ và xu hướng mới.</p>
+        </div>
+
+        <div class="card">
+            <h3>Thể thao</h3>
+            <p>Cập nhật các tin tức thể thao đáng chú ý.</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    © 2026 HVP NEWS 24H
+</footer>
+
+</body>
+</html>
