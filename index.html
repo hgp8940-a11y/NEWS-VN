@@ -1,134 +1,103 @@
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HVP NEWS 24H</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            background: #10141d;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-
-        header {
-            background: #080c14;
-            padding: 22px 8%;
-            border-bottom: 2px solid #e63946;
-        }
-
-        header h1 {
-            margin: 0;
-            color: #ff3949;
-            font-size: 30px;
-        }
-
-        nav {
-            background: #171e2b;
-            padding: 15px 8%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .container {
-            padding: 30px 8%;
-        }
-
-        .headline {
-            background: #202a3a;
-            padding: 30px;
-            border-radius: 12px;
-        }
-
-        .headline h2 {
-            color: #ff4757;
-        }
-
-        .news {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .card {
-            background: #202a3a;
-            padding: 22px;
-            border-radius: 12px;
-        }
-
-        .card h3 {
-            color: #ff5967;
-        }
-
-        footer {
-            text-align: center;
-            padding: 25px;
-            color: #999;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEWS VN - Tin tức tổng hợp 24H</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b1019;color:#fff;font-family:Arial,sans-serif}
+header{padding:25px 7%;background:#101827;border-bottom:3px solid #e63946}
+.logo{font-size:36px;font-weight:900;color:#fff}
+.logo span{color:#ed3549}
+header p{color:#aab4c4}
+nav{padding:16px 7%;background:#182336;display:flex;gap:25px;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold;font-size:14px}
+nav a:hover{color:#ed3549}
+.container{max-width:1200px;margin:auto;padding:30px 20px}
+.hero{padding:35px;background:linear-gradient(120deg,#263d5b,#121a29);border-radius:12px}
+.hero h1{font-size:32px}
+.hero p{color:#c1cad8;line-height:1.7}
+.title{border-left:4px solid #ed3549;padding-left:12px;margin:35px 0 20px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin:20px 0}
+.filters button{background:#1b293d;color:white;border:1px solid #39465c;padding:10px 16px;border-radius:20px;cursor:pointer}
+.filters button.active{background:#ed3549}
+.search{display:flex;gap:10px;margin-top:20px}
+.search input{flex:1;min-width:0;padding:14px;background:#0d1523;color:white;border:1px solid #39465c;border-radius:7px}
+.search button{background:#ed3549;color:white;border:0;padding:12px 20px;border-radius:7px;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#172235;border:1px solid #29364a;border-radius:10px;overflow:hidden}
+.thumb{height:150px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#263d5b,#111827);font-size:48px}
+.content{padding:18px}
+.tag{color:#ff5364;font-weight:bold;font-size:12px}
+.card h3{line-height:1.5}
+.card p{color:#aab4c4;font-size:14px;line-height:1.6}
+footer{text-align:center;background:#101827;padding:30px;color:#aab4c4;margin-top:50px}
+footer strong{color:#ed3549}
+@media(max-width:750px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.hero h1{font-size:24px}}
+</style>
 </head>
 <body>
-
 <header>
-    <h1> NEWS VN</h1>
-    <p>Tin tức mới nhất - Cập nhật mỗi ngày</p>
+ <div class="logo">NEWS <span>VN</span></div>
+ <p>TIN TỨC TỔNG HỢP 24H</p>
 </header>
-
 <nav>
-    <a href="#">Trang chủ</a>
-    <a href="#">Thời sự</a>
-    <a href="#">Thế giới</a>
-    <a href="#">Công nghệ</a>
-    <a href="#">Thể thao</a>
-    <a href="#">Giải trí</a>
+ <a href="#">TRANG CHỦ</a>
+ <a href="#news">THỜI SỰ</a>
+ <a href="#news">THẾ GIỚI</a>
+ <a href="#news">CÔNG NGHỆ</a>
+ <a href="#news">THỂ THAO</a>
+ <a href="#news">GIẢI TRÍ</a>
 </nav>
-
-<div class="container">
-    <section class="headline">
-        <h2>CHÀO MỪNG ĐẾN VỚI NEWS VN</h2>
-        <p>Nơi cập nhật tin tức tổng hợp và những thông tin đáng chú ý.</p>
-    </section>
-
-    <h2>TIN TỨC NỔI BẬT</h2>
-
-    <section class="news">
-        <div class="card">
-            <h3>Thời sự</h3>
-            <p>Không gian dành cho những tin tức thời sự mới nhất.</p>
-        </div>
-
-        <div class="card">
-            <h3>Thế giới</h3>
-            <p>Cập nhật các sự kiện nổi bật trên thế giới.</p>
-        </div>
-
-        <div class="card">
-            <h3>Công nghệ</h3>
-            <p>Khám phá công nghệ và xu hướng mới.</p>
-        </div>
-
-        <div class="card">
-            <h3>Thể thao</h3>
-            <p>Cập nhật các tin tức thể thao đáng chú ý.</p>
-        </div>
-    </section>
-</div>
-
-<footer>
-    © 2026 NEWS VN
-</footer>
-
+<main class="container">
+ <section class="hero">
+  <small style="color:#ff5364">NEWS VN - 24H</small>
+  <h1>CẬP NHẬT TIN TỨC MỖI NGÀY</h1>
+  <p>Tổng hợp thông tin Việt Nam và thế giới, công nghệ, thể thao, giải trí.</p>
+  <div class="search">
+   <input id="search" placeholder="Tìm kiếm tin tức...">
+   <button onclick="filterNews()">Tìm kiếm</button>
+  </div>
+ </section>
+ <h2 class="title" id="news">TIN TỨC MỚI NHẤT</h2>
+ <div class="filters">
+  <button class="active" onclick="choose('Tất cả',this)">Tất cả</button>
+  <button onclick="choose('Thời sự',this)">Thời sự</button>
+  <button onclick="choose('Thế giới',this)">Thế giới</button>
+  <button onclick="choose('Công nghệ',this)">Công nghệ</button>
+  <button onclick="choose('Thể thao',this)">Thể thao</button>
+  <button onclick="choose('Giải trí',this)">Giải trí</button>
+ </div>
+ <div class="grid" id="grid">
+  <article class="card" data-category="Thời sự"><div class="thumb">🇻🇳</div><div class="content"><span class="tag">THỜI SỰ</span><h3>Tin tức nổi bật tại Việt Nam</h3><p>Chuyên mục thông tin trong nước.</p></div></article>
+  <article class="card" data-category="Thế giới"><div class="thumb">🌍</div><div class="content"><span class="tag">THẾ GIỚI</span><h3>Tin tức quốc tế mới nhất</h3><p>Cập nhật các sự kiện thế giới.</p></div></article>
+  <article class="card" data-category="Công nghệ"><div class="thumb">💻</div><div class="content"><span class="tag">CÔNG NGHỆ</span><h3>Khám phá xu hướng công nghệ</h3><p>Trí tuệ nhân tạo và công nghệ mới.</p></div></article>
+  <article class="card" data-category="Thể thao"><div class="thumb">⚽</div><div class="content"><span class="tag">THỂ THAO</span><h3>Tin tức thể thao và bóng đá</h3><p>Cập nhật các giải đấu đáng chú ý.</p></div></article>
+  <article class="card" data-category="Giải trí"><div class="thumb">🎬</div><div class="content"><span class="tag">GIẢI TRÍ</span><h3>Thế giới giải trí</h3><p>Phim ảnh, âm nhạc và văn hóa.</p></div></article>
+  <article class="card" data-category="Công nghệ"><div class="thumb">🤖</div><div class="content"><span class="tag">CÔNG NGHỆ</span><h3>Trí tuệ nhân tạo</h3><p>Khám phá ứng dụng AI trong cuộc sống.</p></div></article>
+ </div>
+ <p id="empty" style="display:none;color:#aaa">Không tìm thấy bài viết.</p>
+</main>
+<footer><strong>NEWS VN</strong><p>Tin tức tổng hợp 24H</p><p>© 2026 NEWS VN</p></footer>
+<script>
+let category='Tất cả';
+function filterNews(){
+let q=document.getElementById('search').value.toLowerCase(),count=0;
+document.querySelectorAll('.card').forEach(c=>{
+let ok=(category==='Tất cả'||c.dataset.category===category)&&c.innerText.toLowerCase().includes(q);
+c.style.display=ok?'block':'none';if(ok)count++;
+});
+document.getElementById('empty').style.display=count?'none':'block';
+}
+function choose(v,b){
+category=v;
+document.querySelectorAll('.filters button').forEach(x=>x.classList.remove('active'));
+b.classList.add('active');filterNews();
+}
+document.getElementById('search').addEventListener('input',filterNews);
+</script>
 </body>
 </html>
