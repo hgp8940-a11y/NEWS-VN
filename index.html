@@ -110,6 +110,23 @@ const supabaseClient = window.supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
 );
+ 
+async function loadNews() {
+    const { data, error } = await supabaseClient
+        .from('news')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    if (error) {
+        console.error('Lỗi tải tin:', error);
+        return;
+    }
+
+    console.log('Tin tức từ Supabase:', data);
+}
+
+loadNews();
+
 </script>
 </html>
 
